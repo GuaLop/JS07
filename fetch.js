@@ -30,8 +30,9 @@ function solicitudFetch() {
     }
 
     function dibujarTabla (users){
-        for (let i=0; i<users.length; i++){
-            let body = document.getElementById("body");
+        let body = document.getElementById("body");
+        body.innerHTML = "";   
+        for (let i=0; i<users.length; i++){    
             let tr = document.createElement("tr");
             let td = document.createElement("td");
             td.innerHTML = users[i].id;
